@@ -1,0 +1,16 @@
+name: 'Set Up Orthanc'
+description: 'Greet someone and record the time'
+inputs:
+  port:  # id of input
+    description: 'Port to run Orthanc on'
+    required: true
+    default: '8042'
+
+outputs:
+  url: # id of output
+    description: 'The url of the Orthanc server'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.port }}
