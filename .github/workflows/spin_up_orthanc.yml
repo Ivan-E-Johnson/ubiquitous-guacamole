@@ -18,13 +18,14 @@ jobs:
         with:
           lfs: true
 
+
       - name: Check if Orthanc is running
         run: ps -eaf | grep Orthanc
 
 
       - name: Set up Orthanc
         run: |
-          cd ${{ github.workspace }}
+          cd ${{ github.workspace }}/Testing_Orthanc
           Linux/Orthanc OrthancConfig.json
           
 
