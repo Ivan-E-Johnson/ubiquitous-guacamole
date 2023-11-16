@@ -26,6 +26,10 @@ jobs:
       - name: Set up Orthanc
         run: |
           cd ${{ github.workspace }}/Testing_Orthanc
+          ls -la
+          echo "Starting Orthanc"
+          pwd
+          
           Linux/Orthanc OrthancConfig.json
           
 
