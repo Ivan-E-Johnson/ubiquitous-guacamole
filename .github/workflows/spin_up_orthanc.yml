@@ -25,7 +25,7 @@ jobs:
       - name: Set up Orthanc
         run: |
           cd ${{ github.workspace }}
-          Orthanc OrthancConfig.json
+          Linux/Orthanc OrthancConfig.json
           
 
       - name: Check if Orthanc is running
