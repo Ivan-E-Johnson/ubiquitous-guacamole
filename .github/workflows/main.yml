@@ -19,3 +19,7 @@ jobs:
       # Use the output from the `hello` step
       - name: Get the output time
         run: echo "The time was ${{ steps.hello.outputs.time }}"
+  orthanc_job:
+    name: A job to spin up Orthanc
+    uses: ./.github/workflows/spin_up_orthanc.yml
+
